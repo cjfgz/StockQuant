@@ -3,13 +3,15 @@
         "level": "debug",
         "handler": "stream"
     },
-    "DINGTALK": "your dingding token",
-    "TUSHARE": "your tushare token",
+    "DINGTALK": "https://oapi.dingtalk.com/robot/send?access_token=52277c0ca9aa3300a7668b27c2f3855ecc1067ebe670d26f3611ffaf60089109",
+    "TUSHARE": "e30059241b8ad65fbbfa9ad27b8f492ab5657bb8da6527468a1cf43c",
     "SENDMAIL": {
-        "from" : "your qq email address",
-        "password" : "your qq email authorization code",
-        "to" : "your qq email address",
+        "from" : "184733657@qq.com",
+        "password" : "",
+        "to" : "iloveyou@icloud.com",
         "server" : "smtp.qq.com",
         "port": 587
     }
 }
+
+

@@ -12,7 +12,6 @@ class Config:
     """
 
     def __init__(self):
-        self.log = {}           # 日志配置
         self.dingtalk = None    # 钉钉配置
         self.tushare_api = None # tushare api
 
@@ -38,11 +37,13 @@ class Config:
         """ 更新配置
         @param update_fields 更新字段
         """
-        self.log = update_fields.get("LOG", {})                 # 日志配置
-        self.dingtalk = update_fields.get("DINGTALK", {})       # 钉钉配置
-        self.tushare_api = update_fields.get("TUSHARE", {})     # TUSHARE配置
+        self.dingtalk = update_fields.get("DINGTALK", {})
+        self.tushare_api = update_fields.get("TUSHARE", {})
         for k, v in update_fields.items():
             setattr(self, k, v)
+
+    # TuShare配置
+    TUSHARE_TOKEN = ""  # 在 https://tushare.pro 注册后获取
 
 
 config = Config()
