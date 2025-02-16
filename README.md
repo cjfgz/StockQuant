@@ -1,5 +1,35 @@
 # StockQuant
 
+一个基于 Python 的股票量化交易工具包。
+
+## 功能特点
+
+- 多数据源支持
+  - 新浪财经实时行情
+  - 腾讯财经实时行情
+  - 网易财经实时行情
+  - TuShare Pro 数据接口
+  - BaoStock 历史数据
+
+- 实时行情监控
+  - 支持实时获取股票价格、成交量等数据
+  - 支持自定义股票代码监控
+  - 支持沪深两市股票
+
+- 消息通知
+  - 钉钉机器人通知
+  - 支持自定义消息模板
+  - 实时推送股票数据
+
+- 数据分析
+  - K线数据获取
+  - 历史数据分析
+  - 技术指标计算
+
+## 快速开始
+
+1. 安装依赖
+
 `Gary-Hertel`
 
 请勿提交`issue`！可以加入交流群与其他朋友一起自学交流，加微信`mzjimmy`
@@ -187,178 +217,4 @@ kline = Market.kline("sh601003", "1d")
 | `考夫曼自适应移动平均线` |      `KAMA(20, 30, kline=kline)`      |                          `一维数组`                          |
 |        `随机指标`        |     `KDJ(20, 30, 9, kline=kline)`     |               `{'k': k值数组， 'd': d值数组}`                |
 |       `周期最低价`       |       `LOWEST(20, kline=kline)`       |                          `一维数组`                          |
-|         `能量潮`         |          `OBV(kline=kline)`           |                          `一维数组`                          |
-|        `强弱指标`        |        `RSI(20, kline=kline)`         |                          `一维数组`                          |
-|       `变动率指标`       |        `ROC(20, kline=kline)`         |                          `一维数组`                          |
-|    `随机相对强弱指数`    |  `STOCHRSI(20, 30, 9, kline=kline)`   |       `{'stochrsi': stochrsi数组, 'fastk': fastk数组}`       |
-|       `抛物线指标`       |          `SAR(kline=kline)`           |                          `一维数组`                          |
-|        `标准方差`        | `STDDEV(20, kline=kline, nbdev=None)` |                          `一维数组`                          |
-|   `三重指数平滑平均线`   |        `TRIX(20, kline=kline)`        |                          `一维数组`                          |
-|         `成交量`         |         `VOLUME(kline=kline)`         |                          `一维数组`                          |
-
-
-
-------
-
-## 五、日志
-
-日志模块对于分析程序的运行状况至关重要，`StockQuant`内置日志模块，可用来方便记录程序运行状况与排查问题。
-
-日志一共分成5个等级，从低到高分别是：
-
-1. DEBUG
-2. INFO
-3. WARNING
-4. ERROR
-5. CRITICAL
-
-```python
-logger.debug("DEBUG日志")
-logger.info("INFO日志")
-logger.warning("WARNING日志")
-logger.error("ERROR日志")
-logger.critical("CRITICAL日志")
-```
-
-配置文件中，`level`如设置成`debug`级别，则会输出所有级别的日志，如设置成`info`级别，只会输出`info`及以上级别的日志，而不会输出`debug`级别的日志。
-
-配置文件中，`handler`如设置为`stream`，是打印日志到控制台；如设为`file`是保存至文件，文件大小按`1M`进行分割，会保留最近的`1000`份日志文件；如设置为`time`是按照每天进行分割。
-
-**`Note`：如果是在宝塔面板上运行程序，记得将配置文件中`LOG`的`handler`设置不要设置为`stream`，否则会一直写入日志，并且不会自动分割日志。**
-
-
-
-------
-
-## 六、信息推送
-
-信息推送对于风控通知来说是至关重要的。`StockQuant`内置信息推送模块，可直接调用以推送信息至钉钉或邮箱。
-
-### 1.钉钉
-
-`Note`：需在配置文件中设置钉钉`WebHook Api`，建立钉钉群聊后添加一个`WebHook`机器人，创建机器人时指定关键字如`交易`。
-
-#### （1）推送文本类型信息
-
-推送文本类型信息时需包含关键字，否则无法送达。
-
-```python
-Dingralk.text("交易提醒：sh600519的价格已达到2000元！")
-```
-
-#### （2）推送`markdown`类型信息
-
-推送`markdown`信息时无需包含关键字（前提是你的关键字设置的是`交易`）。下面看一个示例：
-
-```python
-from stockquant.quant import *
-
-config.loads('config.json')
-
-tick = Market.tick("sh600519")
-
-content = "### 订单更新推送\n\n" \
-            "> **股票名称:** {symbol}\n\n" \
-            "> **当前价格:** {last}\n\n" \
-            "> **成交数量:** {transactions}\n\n" \
-            "> **成交金额:** {turnover}\n\n" \
-            "> **时间戳:** {timestamp}".format(
-                symbol=tick.symbol,
-                last=tick.last,
-                transactions=tick.transactions,
-                turnover=tick.turnover,
-                timestamp=tick.timestamp
-            )
-DingTalk.markdown(content)
-```
-
-### 2.邮件
-
-```python
-sendmail("交易提醒：sh600519的价格已达到2000美元！")
-```
-
-
-
-------
-
-## 七、数据存储
-
-```python
-txt_save(content, filename)						 # 保存数据至txt文件
-txt_read(filename)								# 读取txt文件中的数据
-save_to_csv_file(tuple, path)					 # 保存文件至csv文件
-read_csv_file(path)								# 读取csv文件中保存的数据
-```
-
-
-
-------
-
-## 八、时间戳转换的一些方法
-
-```python
-sleep(seconds)							# 休眠，作用等同于time.sleep()
-get_cur_timestamp()						# 获取当前时间戳（秒）
-ts_to_utc_str(ts)						# 将时间戳转换为UTC时间格式
-get_cur_timestamp_ms()					# 获取当前时间戳(毫秒)
-get_cur_datetime_m()					# 获取当前日期时间字符串，包含 年 + 月 + 日 + 时 + 分 + 秒
-get_datetime()							# 获取日期字符串，包含 年 + 月 + 日
-date_str_to_dt(date_str)				# 日期字符串转换到datetime对象
-dt_to_date_str(dt)						# datetime对象转换到日期字符串
-get_utc_time()							# 获取当前utc时间
-get_localtime()							# 获取本地时间
-ts_to_datetime_str(ts)					# 将时间戳转换为日期时间格式，年-月-日 时:分:秒
-datetime_str_to_ts(dt_str)				# 将日期时间格式字符串转换成时间戳
-datetime_to_timestamp(dt)				# 将datetime对象转换成时间戳
-utctime_str_to_ts(utctime_str)			# 将UTC日期时间格式字符串转换成时间戳
-utctime_str_to_mts(utctime_str)			# 将UTC日期时间格式字符串转换成时间戳（毫秒）
-```
-
-
-
-## 九、自动交易
-
-```python
-"""
-股票自动交易，使用的是easytrader开源项目。
-仅支持windows系统，云主机与虚拟机上无法运行。
-具体用法，可参考哔哩哔哩教学视频：
-    https://www.bilibili.com/video/BV1zK411u7uG
-"""
-
-
-from stockquant.quant import *
-
-
-class Strategy:
-
-    def __init__(self):
-        self.trade = Trade(config_file="config.json", symbol="sh512980")    # 初始化trade模块
-
-        self.do_action()
-
-    def do_action(self):
-        price = Market.tick("sh512980").ask1_price          # 获取卖一价格
-        success, error = self.trade.buy(price, amount)      # 买入
-        success, error = self.trade.sell(price, amount)     # 卖出
-        success, error = self.trade.get_positions()         # 查询当前持仓
-        success, error = self.trade.get_balance()           # 查询资金信息
-        success, error = self.trade.get_today_orders()      # 查询今日委托
-        success, error = self.trade.get_today_deals()       # 查询今日成交
-        if error:
-            DingTalk.text("交易提醒：失败：{}".format(error))
-            pass
-        logger.info("success:{}".format(success))
-
-
-if __name__ == '__main__':
-
-    Strategy()
-```
-
-
-
-------
-
-`updated at 2021/03/03`
+|         `能量潮`         |          `OBV(kline=kline)`           |                          `

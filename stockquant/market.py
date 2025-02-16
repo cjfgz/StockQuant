@@ -17,6 +17,38 @@ class Market:
         self.baostock = BaoStockData()
         self.money = MoneyData()
         self.sina = Sina()  # 添加 Sina 实例
+        self.tencent = Tencent()
+        self.tushare = TuSharePro()
+
+    def stocks_list(self, day=None):
+        """
+        获取股票列表
+        :param day: 可选，日期，格式：YYYY-MM-DD，默认为最新交易日
+        :return: 股票代码列表，如 ["sh600000", "sz000001", ...]
+        """
+        try:
+            # 使用 baostock 获取股票列表
+            stock_list = self.baostock.query_all_stock(day)
+            if not stock_list:
+                logger.error("获取股票列表为空")
+                return []
+                
+            # 转换为标准格式
+            formatted_list = []
+            for stock in stock_list:
+                code = stock.split('.')[1]
+                prefix = stock.split('.')[0]
+                if prefix == 'sh' and code.startswith('6'):
+                    formatted_list.append(f"sh{code}")
+                elif prefix == 'sz' and (code.startswith('000') or code.startswith('300')):
+                    formatted_list.append(f"sz{code}")
+                    
+            logger.info(f"获取到 {len(formatted_list)} 只股票")
+            return formatted_list
+            
+        except Exception as e:
+            logger.error(f"获取股票列表失败: {str(e)}")
+            return []
 
     @staticmethod
     def tick(symbol):
@@ -60,11 +92,10 @@ class Market:
         """
         return BaoStockData.query_history_k_data_plus(symbol, timeframe, adj=adj, start_date=start_date, end_date=end_date)
 
-    @staticmethod
-    def today_is_open():
+    def today_is_open(self):
         """查询今日沪深股市是否开盘，如果开盘返回True,反之False"""
         today = get_localtime()[0: 10]
-        result = BaoStockData.query_trade_dates(start_date=today, end_date=today)['is_trading_day'][0]
+        result = self.baostock.query_trade_dates(start_date=today, end_date=today)['is_trading_day'][0]
         return True if result == '1' else False
 
     @staticmethod

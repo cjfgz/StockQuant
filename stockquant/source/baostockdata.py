@@ -7,56 +7,65 @@ from stockquant.config import config
 class BaoStockData:
 
     def __init__(self):
-        pass
+        # 登录系统
+        try:
+            bs.login()
+        except Exception as e:
+            logger.error(f"BaoStock登录失败: {str(e)}")
 
-    @staticmethod
-    def query_trade_dates(start_date=None, end_date=None):
+    def __del__(self):
+        # 登出系统
+        try:
+            bs.logout()
+        except:
+            pass
+
+    def query_all_stock(self, day=None):
         """
-        交易日查询
-        方法说明：通过API接口获取股票交易日信息，可以通过参数设置获取起止年份数据，提供上交所1990-今年数据。 返回类型：pandas的DataFrame类型。
-        :param start_date:开始日期，为空时默认为2015-01-01。
-        :param end_date:结束日期，为空时默认为当前日期。
+        获取所有股票列表
+        :param day: 可选，日期，格式：YYYY-MM-DD，默认为最新交易日
+        :return: 股票代码列表
         """
-        lg = bs.login()
-        if lg.error_code != '0':
-            logger.error('login respond  error_msg:' + lg.error_msg)
+        try:
+            # 获取证券基本资料
+            rs = bs.query_all_stock(day)
+            if rs.error_code != '0':
+                logger.error(f"获取股票列表失败: {rs.error_msg}")
+                return []
+                
+            # 处理数据
+            stock_list = []
+            while (rs.error_code == '0') & rs.next():
+                stock = rs.get_row_data()
+                # 只保留A股
+                if stock[0].startswith(('sh.6', 'sz.00', 'sz.30')):
+                    stock_list.append(stock[0])
+            
+            return stock_list
+            
+        except Exception as e:
+            logger.error(f"获取股票列表异常: {str(e)}")
+            return []
 
-        rs = bs.query_trade_dates(start_date=start_date, end_date=end_date)
-        if rs.error_code != '0':
-            logger.error('query_trade_dates respond  error_msg:' + rs.error_msg)
-
-        data_list = []
-        while (rs.error_code == '0') & rs.next():
-            data_list.append(rs.get_row_data())
-        result = pd.DataFrame(data_list, columns=rs.fields)
-
-        bs.logout()
-        return result
-
-    @staticmethod
-    def query_all_stock(day=None):
+    def query_trade_dates(self, start_date=None, end_date=None):
         """
-        证券代码查询
-        方法说明：获取指定交易日期所有股票列表。通过API接口获取证券代码及股票交易状态信息，与日K线数据同时更新。可以通过参数‘某交易日’获取数据（包括：A股、指数），提供2006-今数据。
-        返回类型：pandas的DataFrame类型。
-        更新时间：与日K线同时更新。
-        :param day:需要查询的交易日期，为空时默认当前日期。
+        查询交易日信息
         """
-        lg = bs.login()
-        if lg.error_code != '0':
-            logger.error('login respond  error_msg:' + lg.error_msg)
-
-        rs = bs.query_all_stock(day=day)
-        if rs.error_code != '0':
-            logger.error('query_all_stock respond  error_msg:' + rs.error_msg)
-
-        data_list = []
-        while (rs.error_code == '0') & rs.next():
-            data_list.append(rs.get_row_data())
-        result = pd.DataFrame(data_list, columns=rs.fields)
-
-        bs.logout()
-        return result
+        try:
+            rs = bs.query_trade_dates(start_date=start_date, end_date=end_date)
+            if rs.error_code != '0':
+                logger.error(f"查询交易日信息失败: {rs.error_msg}")
+                return pd.DataFrame()
+            
+            data_list = []
+            while (rs.error_code == '0') & rs.next():
+                data_list.append(rs.get_row_data())
+            
+            return pd.DataFrame(data_list, columns=rs.fields)
+            
+        except Exception as e:
+            logger.error(f"查询交易日信息异常: {str(e)}")
+            return pd.DataFrame()
 
     @staticmethod
     def query_stock_basic(code=None, code_name=None):
@@ -92,8 +101,8 @@ class BaoStockData:
         :param symbol:股票代码，sh或sz+6位数字代码，或者指数代码，如：sh601398。sh：上海；sz：深圳。此参数不可为空；
         :param timeframe:k线周期，"5m"为5分钟，"15m"为15分钟，"30m"为30分钟，"1h"为1小时，"1d"为日，"1w"为一周，"1M"为一月。指数没有分钟线数据；周线每周最后一个交易日才可以获取，月线每月最后一个交易日才可以获取。
         :param adj:复权类型，默认是"3"不复权；前复权:"2"；后复权:"1"。已支持分钟线、日线、周线、月线前后复权。 BaoStock提供的是涨跌幅复权算法复权因子，具体介绍见：复权因子简介或者BaoStock复权因子简介。
-        :param start_date:开始日期（包含），格式“YYYY-MM-DD”，为空时取2015-01-01；
-        :param end_date:结束日期（包含），格式“YYYY-MM-DD”，为空时取最近一个交易日；
+        :param start_date:开始日期（包含），格式"YYYY-MM-DD"，为空时取2015-01-01；
+        :param end_date:结束日期（包含），格式"YYYY-MM-DD"，为空时取最近一个交易日；
         :return:返回一个列表
         """
         frequency = ''

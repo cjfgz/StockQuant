@@ -3,53 +3,40 @@ import json
 from stockquant.utils.logger import logger
 
 
-class Sina(object):
-    @staticmethod
-    def get_realtime_data(symbol):
+class Sina:
+    def __init__(self):
+        self.base_url = "http://hq.sinajs.cn/list="
+
+    def get_realtime_data(self, symbol):
         """
-        获取新浪股票实时数据接口
-        :param symbol: 例如："sh601003"，或者"sz002307"，前者是沪市，后者是深市
-        :return: 返回dict
+        获取新浪实时行情数据
+        :param symbol: 股票代码，如 'sh600000' 或 'sz000001'
+        :return: dict 或 None
         """
         try:
-            if symbol.startswith('sh'):
-                symbol_code = 'sh' + symbol[2:]
-            elif symbol.startswith('sz'):
-                symbol_code = 'sz' + symbol[2:]
-            else:
-                logger.error(f"股票代码格式错误: {symbol}")
-                return None
-
-            url = f"http://hq.sinajs.cn/list={symbol_code}"
+            url = f"{self.base_url}{symbol}"
             headers = {
-                "Referer": "http://finance.sina.com.cn",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+                'Referer': 'http://finance.sina.com.cn',
+                'User-Agent': 'Mozilla/5.0'
             }
-            res = requests.get(url, headers=headers)
-            res.encoding = 'gbk'
+            response = requests.get(url, headers=headers)
+            response.encoding = 'gbk'
             
-            text = res.text.strip()
-            if not text or '""' in text:
-                logger.error(f"获取不到股票数据: {symbol}")
+            text = response.text.split('="')[1].split('";')[0].split(',')
+            if len(text) < 32:  # 确保数据完整
                 return None
                 
-            data = text.split('=')[1].split(',')
-            if len(data) < 32:
-                logger.error(f"股票数据格式错误: {symbol}")
-                return None
-                
-            result = {
-                'symbol': symbol,
-                'name': data[0].replace('"', ''),
-                'open': float(data[1]),
-                'close': float(data[2]),  # 昨收
-                'price': float(data[3]),  # 当前价格
-                'high': float(data[4]),
-                'low': float(data[5]),
-                'volume': float(data[8]),
-                'amount': float(data[9])
+            return {
+                'name': text[0],
+                'open': float(text[1]),
+                'close': float(text[2]),  # 昨日收盘价
+                'price': float(text[3]),  # 当前价格
+                'high': float(text[4]),
+                'low': float(text[5]),
+                'volume': float(text[8]),
+                'amount': float(text[9])
             }
-            return result
+            
         except Exception as e:
-            logger.error(f"获取新浪股票实时数据失败: {str(e)}")
+            logger.error(f"获取股票{symbol}实时数据失败: {str(e)}")
             return None 

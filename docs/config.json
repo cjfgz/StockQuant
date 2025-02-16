@@ -3,8 +3,13 @@
         "level": "debug",
         "handler": "stream"
     },
-    "DINGTALK": "https://oapi.dingtalk.com/robot/send?access_token=52277c0ca9aa3300a7668b27c2f3855ecc1067ebe670d26f3611ffaf60089109",
-    "TUSHARE": "e30059241b8ad65fbbfa9ad27b8f492ab5657bb8da6527468a1cf43c",
+    "DINGTALK": {
+        "webhook": "https://oapi.dingtalk.com/robot/send?access_token=52277c0ca9aa3300a7668b27c2f3855ecc1067ebe670d26f3611ffaf60089109",
+        "secret": ""
+    },
+    "TUSHARE": {
+        "token": ""
+    },
     "SENDMAIL": {
         "from" : "184733657@qq.com",
         "password" : "",
