@@ -207,42 +207,88 @@ class StockChooser:
     def get_stock_data(self, stock_code):
         """获取股票数据（含基本面指标）"""
         try:
+            # 首先尝试使用 Tushare 获取数据
             code = stock_code[2:] + '.' + stock_code[:2].upper()
             trade_date = datetime.now().strftime('%Y%m%d')
             
-            # 获取日线数据
-            df_daily = self.pro.daily(ts_code=code, trade_date=trade_date)
-            if df_daily.empty:
-                return None
+            try:
+                # 获取日线数据
+                df_daily = self.pro.daily(ts_code=code, trade_date=trade_date)
+                if not df_daily.empty:
+                    # 获取基本面数据
+                    df_basic = self.pro.daily_basic(
+                        ts_code=code, 
+                        trade_date=trade_date,
+                        fields='turnover_rate,circ_mv'
+                    )
+                    
+                    if not df_basic.empty:
+                        return {
+                            'code': stock_code,
+                            'name': self.get_stock_name(code),
+                            'price': float(df_daily.iloc[0]['close']),
+                            'close': float(df_daily.iloc[0]['pre_close']),
+                            'volume': float(df_daily.iloc[0]['vol'] * 100),  # 转换为股
+                            'amount': float(df_daily.iloc[0]['amount'] * 1000),  # 转换为元
+                            'turnover_rate': float(df_basic.iloc[0]['turnover_rate']),
+                            'circ_mv': float(df_basic.iloc[0]['circ_mv'])
+                        }
+            except Exception as e:
+                logger.warning(f"Tushare数据获取失败，尝试使用新浪数据源: {str(e)}")
             
-            # 获取基本面数据
-            df_basic = self.pro.daily_basic(
-                ts_code=code, 
-                trade_date=trade_date,
-                fields='turnover_rate,circ_mv'
-            )
-            if df_basic.empty:
-                return None
+            # 如果Tushare获取失败，使用新浪数据源作为备用
+            sina_data = self.market.sina.get_realtime_data(stock_code)
+            if sina_data:
+                # 计算换手率和流通市值
+                try:
+                    stock_basic = self.pro.stock_basic(ts_code=code, fields='total_share')
+                    if not stock_basic.empty:
+                        total_share = float(stock_basic.iloc[0]['total_share']) * 10000  # 转换为股
+                        circ_mv = sina_data['price'] * total_share
+                        turnover_rate = (sina_data['volume'] / total_share) * 100
+                    else:
+                        circ_mv = 0
+                        turnover_rate = 0
+                except:
+                    circ_mv = 0
+                    turnover_rate = 0
+                    
+                return {
+                    'code': stock_code,
+                    'name': sina_data['name'],
+                    'price': float(sina_data['price']),
+                    'close': float(sina_data['close']),
+                    'volume': float(sina_data['volume']),
+                    'amount': float(sina_data['amount']),
+                    'turnover_rate': turnover_rate,
+                    'circ_mv': circ_mv
+                }
             
-            return {
-                'code': stock_code,
-                'name': self.get_stock_name(code),
-                'price': float(df_daily.iloc[0]['close']),
-                'close': float(df_daily.iloc[0]['pre_close']),
-                'volume': float(df_daily.iloc[0]['vol'] * 100),  # 转换为股
-                'amount': float(df_daily.iloc[0]['amount'] * 1000),  # 转换为元
-                'turnover_rate': float(df_basic.iloc[0]['turnover_rate']),
-                'circ_mv': float(df_basic.iloc[0]['circ_mv'])
-            }
+            logger.error(f"获取股票{stock_code}数据失败: 所有数据源均无法获取数据")
+            return None
+        
         except Exception as e:
             logger.error(f"获取股票{stock_code}数据失败: {str(e)}")
             return None
-            
+
     def get_stock_name(self, ts_code):
         """获取股票名称"""
         try:
+            # 首先尝试从缓存获取
+            if hasattr(self, '_stock_names') and ts_code in self._stock_names:
+                return self._stock_names[ts_code]
+            
+            # 如果缓存中没有，则从Tushare获取
             df = self.pro.stock_basic(ts_code=ts_code, fields='name')
-            return df.iloc[0]['name']
+            if not df.empty:
+                name = df.iloc[0]['name']
+                # 缓存股票名称
+                if not hasattr(self, '_stock_names'):
+                    self._stock_names = {}
+                self._stock_names[ts_code] = name
+                return name
+            
+            return ts_code
         except:
             return ts_code
 
