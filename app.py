@@ -50,17 +50,22 @@ print("Static folder:", app.static_folder)
 print("Static folder exists:", os.path.exists(app.static_folder))
 print("Index.html exists:", os.path.exists(os.path.join(app.static_folder, 'index.html')))
 
+@app.route('/')
+def index():
+    """返回主页"""
+    return app.send_static_file('index.html')
+
 @app.route('/api/stock/conditions', methods=['GET'])
 def get_conditions():
     """获取当前选股条件"""
-    return jsonify({
-        'max_price': chooser.MAX_PRICE,
-        'min_volume': chooser.MIN_VOLUME,
-        'up_percent': chooser.UP_PERCENT,
-        'min_turnover': chooser.MIN_TURNOVER,
-        'min_circ_mv': chooser.MIN_CIRC_MV,
-        'max_circ_mv': chooser.MAX_CIRC_MV
-    })
+    try:
+        return jsonify({
+            'max_price': chooser.MAX_PRICE,
+            'min_volume': chooser.MIN_VOLUME,
+            'up_percent': chooser.UP_PERCENT
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/stock/conditions', methods=['POST'])
 def update_conditions():
@@ -70,9 +75,6 @@ def update_conditions():
         chooser.MAX_PRICE = float(data.get('max_price', chooser.MAX_PRICE))
         chooser.MIN_VOLUME = float(data.get('min_volume', chooser.MIN_VOLUME))
         chooser.UP_PERCENT = float(data.get('up_percent', chooser.UP_PERCENT))
-        chooser.MIN_TURNOVER = float(data.get('min_turnover', chooser.MIN_TURNOVER))
-        chooser.MIN_CIRC_MV = float(data.get('min_circ_mv', chooser.MIN_CIRC_MV))
-        chooser.MAX_CIRC_MV = float(data.get('max_circ_mv', chooser.MAX_CIRC_MV))
         return jsonify({'message': '选股条件更新成功'})
     except Exception as e:
         return jsonify({'error': str(e)}), 400
@@ -81,58 +83,36 @@ def update_conditions():
 def scan_stocks():
     """执行选股"""
     try:
-        logger.info("开始执行选股...")
+        # 使用测试股票列表
+        test_stocks = [
+            'sz300616',  # 尚品宅配
+            'sh600000',  # 浦发银行
+            'sh601318',  # 中国平安
+            'sz000001',  # 平安银行
+            'sh600519',  # 贵州茅台
+            'sz000858',  # 五粮液
+            'sh601888',  # 中国中免
+            'sz002594',  # 比亚迪
+            'sz300750',  # 宁德时代
+            'sh600036'   # 招商银行
+        ]
+        
         matched_stocks = []
-        
-        # 获取股票列表并排除ST股
-        logger.info("正在获取股票列表...")
-        df = chooser.pro.stock_basic(
-            exchange='', 
-            list_status='L', 
-            fields='ts_code,symbol,name'
-        )
-        
-        if df.empty:
-            logger.error("获取股票列表失败")
-            return jsonify({
-                'status': 'error',
-                'message': '获取股票列表失败'
-            }), 500
-            
-        total_stocks = len(df)
-        logger.info(f"共获取到 {total_stocks} 只股票")
-        
-        # 遍历股票列表进行筛选
-        processed = 0
-        for _, row in df.iterrows():
-            processed += 1
-            if processed % 100 == 0:  # 每处理100只股票记录一次进度
-                logger.info(f"已处理 {processed}/{total_stocks} 只股票")
-                
-            if 'ST' in row['name']:
-                continue  # 排除ST股票
-                
-            prefix = 'sh' if row['ts_code'].endswith('.SH') else 'sz'
-            stock_code = f"{prefix}{row['symbol']}"
-            
+        for stock_code in test_stocks:
             try:
-                # 获取股票数据
                 price_info = chooser.get_stock_data(stock_code)
                 if chooser.check_stock_condition(price_info):
-                    logger.info(f"找到符合条件的股票: {stock_code} {price_info['name']}")
                     matched_stocks.append({
                         'code': stock_code,
                         'name': price_info['name'],
                         'price': price_info['price'],
                         'volume': price_info['volume'],
-                        'turnover': price_info['turnover_rate'],
-                        'circ_mv': price_info['circ_mv']
+                        'amount': price_info['amount']
                     })
             except Exception as e:
                 logger.error(f"处理股票 {stock_code} 时出错: {str(e)}")
                 continue
-
-        logger.info(f"选股完成，共找到 {len(matched_stocks)} 只符合条件的股票")
+                
         return jsonify({
             'status': 'success',
             'stocks': matched_stocks,
@@ -180,8 +160,7 @@ def query_stock():
                 'name': price_info['name'],
                 'price': price_info['price'],
                 'volume': price_info['volume'],
-                'turnover': price_info['turnover_rate'],
-                'circ_mv': price_info['circ_mv'],
+                'amount': price_info['amount'],
                 'change': (price_info['price'] - price_info['close']) / price_info['close'] * 100
             }
         })
@@ -193,10 +172,8 @@ def query_stock():
             'message': str(e)
         }), 500
 
-# 修改根路由处理
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
-
 if __name__ == '__main__':
-    app.run(debug=True, port=5000) 
+    # 修改为监听所有网络接口，并显示详细日志
+    print("Starting Flask server...")
+    print("Please access: http://127.0.0.1:5000")
+    app.run(host='0.0.0.0', port=5000, debug=True) 
