@@ -4,7 +4,7 @@
         "handler": "stream"
     },
     "DINGTALK": {
-        "webhook": "https://oapi.dingtalk.com/robot/send?access_token=52277c0ca9aa3300a7668b27c2f3855ecc1067ebe670d26f3611ffaf60089109",
+        "webhook": "https://oapi.dingtalk.com/robot/send?access_token=4eb93c4761257144ee2d35baa90ddf1e4ae7abd8edffe20d5c87527b4195d9e2",
         "secret": ""
     },
     "TUSHARE": {
