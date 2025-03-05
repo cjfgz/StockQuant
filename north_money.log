@@ -1,0 +1,459 @@
+2025-03-02 12:58:47,057 - INFO - API连接成功
+2025-03-02 12:58:47,058 - INFO - 开始运行北向资金选股策略...
+2025-03-02 12:58:51,823 - ERROR - 分析行业失败: list index out of range
+2025-03-02 12:58:57,167 - ERROR - 分析行业交通运输失败: list index out of range
+2025-03-02 12:59:02,009 - ERROR - 分析行业通信失败: list index out of range
+2025-03-02 12:59:05,020 - ERROR - 分析行业美容护理失败: list index out of range
+2025-03-02 12:59:08,932 - ERROR - 分析行业钢铁失败: list index out of range
+2025-03-02 12:59:13,546 - ERROR - 分析行业家用电器失败: list index out of range
+2025-03-02 12:59:17,462 - ERROR - 分析行业基础化工失败: list index out of range
+2025-03-02 12:59:21,586 - ERROR - 分析行业电子失败: list index out of range
+2025-03-02 12:59:58,660 - INFO - API连接成功
+2025-03-02 12:59:58,661 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:00:12,200 - INFO - API连接成功
+2025-03-02 13:00:12,200 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:01:04,564 - ERROR - 获取股票sh.688339数据失败: could not convert string to float: 
+2025-03-02 13:01:18,244 - ERROR - 获取股票sh.600837数据失败: could not convert string to float: 
+2025-03-02 13:01:21,361 - ERROR - 获取股票sh.601211数据失败: could not convert string to float: 
+2025-03-02 13:01:32,232 - ERROR - 获取股票sz.300069数据失败: could not convert string to float: 
+2025-03-02 13:02:03,113 - ERROR - 获取股票sh.688350数据失败: could not convert string to float: 
+2025-03-02 13:02:07,133 - ERROR - 获取股票sz.000488数据失败: could not convert string to float: 
+2025-03-02 13:02:49,550 - ERROR - 获取股票sh.600225数据失败: could not convert string to float: 
+2025-03-02 13:03:53,320 - INFO - API连接成功
+2025-03-02 13:03:53,321 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:04:24,384 - INFO - API连接成功
+2025-03-02 13:04:24,384 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:08:14,659 - INFO - API连接成功
+2025-03-02 13:08:14,659 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:08:30,892 - INFO - API连接成功
+2025-03-02 13:08:30,892 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:08:52,734 - ERROR - 钉钉消息发送失败: 错误描述:关键词不匹配;解决方案:请联系群管理员查看此机器人的关键词，并在发送的信息中包含此关键词;
+2025-03-02 13:08:52,735 - INFO - 选股结果已推送到钉钉
+2025-03-02 13:09:09,070 - ERROR - 钉钉消息发送失败: 错误描述:关键词不匹配;解决方案:请联系群管理员查看此机器人的关键词，并在发送的信息中包含此关键词;
+2025-03-02 13:09:09,071 - INFO - 选股结果已推送到钉钉
+2025-03-02 13:09:31,771 - INFO - API连接成功
+2025-03-02 13:09:31,772 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:09:37,938 - INFO - API连接成功
+2025-03-02 13:09:37,939 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:10:05,323 - INFO - 钉钉消息发送成功
+2025-03-02 13:10:05,324 - INFO - 选股结果已推送到钉钉
+2025-03-02 13:10:09,686 - INFO - 钉钉消息发送成功
+2025-03-02 13:10:09,686 - INFO - 选股结果已推送到钉钉
+2025-03-02 13:15:09,052 - INFO - APIs连接成功
+2025-03-02 13:15:09,053 - INFO - 开始运行北向资金选股策略...
+2025-03-02 13:15:09,747 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:09,886 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:10,031 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:10,160 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:10,301 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:10,435 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:10,573 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:10,713 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:10,871 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:11,012 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:11,151 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:11,290 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:11,431 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:11,567 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:11,701 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 13:15:11,840 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:52,258 - INFO - APIs连接成功
+2025-03-02 16:01:52,258 - INFO - 开始运行北向资金选股策略...
+2025-03-02 16:01:52,948 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:53,088 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:53,254 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:53,398 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:53,538 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:53,695 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:53,827 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:53,971 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:54,119 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:54,261 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:54,396 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:54,549 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:54,699 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:54,840 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:54,982 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:55,123 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:55,270 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:55,408 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:55,548 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:55,696 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:55,829 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:55,963 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:56,093 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:56,229 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:56,372 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:56,507 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:56,635 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:56,775 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:56,928 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:57,067 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:57,210 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:57,347 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:57,492 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:57,630 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:57,767 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:57,920 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:58,052 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:58,197 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:58,337 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:58,479 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:58,630 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:58,798 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:58,940 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:59,086 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:59,223 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:59,364 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:59,496 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:59,627 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:59,760 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:01:59,901 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:00,040 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:00,186 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:00,320 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:00,464 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:00,605 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:00,746 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:00,902 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:01,034 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:01,173 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:01,305 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:01,446 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:01,592 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:01,759 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:01,902 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:02,044 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:02,177 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:02,311 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:02,455 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:02,604 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:02,753 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:02,923 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:03,066 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:03,206 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:03,348 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:03,482 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:03,619 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:03,759 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:03,902 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:04,041 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:04,183 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:04,323 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:04,457 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:04,591 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:04,733 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:04,879 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:05,025 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:05,166 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:05,312 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:05,452 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:05,593 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:05,729 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:05,858 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:06,010 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:06,161 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:06,304 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:06,437 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:06,573 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:06,747 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:06,884 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,021 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,152 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,294 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,421 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,562 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,696 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,826 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:07,967 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:08,107 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:08,297 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:08,428 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:08,571 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:08,711 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:08,859 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:09,004 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:09,148 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:09,308 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:09,442 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:09,590 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:09,731 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:09,870 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:10,030 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:10,173 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:10,315 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:10,470 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:10,627 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:10,776 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:10,919 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:11,070 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:11,202 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:11,334 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:11,467 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:11,607 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:11,744 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:11,890 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,032 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,173 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,314 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,454 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,589 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,722 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,851 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:12,988 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:13,127 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-02 16:02:13,268 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:18,379 - INFO - APIs连接成功
+2025-03-03 17:41:18,380 - INFO - 开始运行北向资金选股策略...
+2025-03-03 17:41:20,091 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:20,228 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:20,372 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:20,512 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:20,647 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:20,787 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:20,927 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:21,063 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:21,203 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:21,372 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:21,508 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:21,654 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:21,792 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:21,939 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:22,078 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:22,238 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:22,365 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:22,494 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:22,634 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:22,772 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:22,912 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:23,050 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:23,190 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:23,331 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:23,463 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:23,629 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:23,767 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:23,905 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:24,035 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:24,172 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:24,305 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:24,448 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:24,594 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:24,737 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:24,875 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:25,031 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:25,191 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:25,329 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:25,465 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:25,602 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:25,735 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:25,871 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,009 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,142 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,276 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,426 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,575 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,718 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,852 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:26,987 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:27,292 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:27,429 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:27,568 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:27,714 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:27,860 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:27,987 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:28,127 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:28,263 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:28,398 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:28,536 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:28,669 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:28,808 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:28,942 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:29,070 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:29,206 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:29,344 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:29,482 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:29,621 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:29,759 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:29,893 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:30,072 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:30,227 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:30,368 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:30,503 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:30,639 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:30,776 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:30,907 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:31,047 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:31,179 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:31,319 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:31,460 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:31,606 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:31,743 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:31,885 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,020 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,158 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,307 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,442 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,577 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,715 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,850 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:32,990 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:33,136 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:33,290 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:33,432 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:33,573 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:33,715 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:33,849 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:33,987 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:34,124 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:34,257 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:34,395 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:34,533 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:34,669 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:34,810 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:34,945 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:35,093 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:35,235 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:35,379 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:35,518 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:35,655 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:35,790 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:35,923 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:36,063 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:36,197 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:36,332 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:36,489 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:36,621 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:36,752 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:36,900 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:37,046 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:37,180 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:37,316 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:37,457 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:37,598 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:37,734 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:37,874 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,009 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,140 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,285 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,425 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,560 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,698 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,842 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:38,977 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:39,107 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:39,257 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:39,393 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:39,526 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:39,671 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:39,799 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:39,944 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:40,076 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:40,223 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:40,362 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:40,495 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:40,639 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:40,772 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:40,909 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,047 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,186 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,314 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,456 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,597 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,730 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,860 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:41,997 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:42,137 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:42,277 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:42,411 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:42,552 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:42,693 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:42,831 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:42,978 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:43,121 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:43,263 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:43,408 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:43,542 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:43,692 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:43,832 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,023 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,159 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,300 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,436 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,578 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,709 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,849 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:44,986 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:45,120 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:45,251 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:45,430 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:45,570 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:45,705 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:45,852 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,004 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,158 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,293 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,432 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,569 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,710 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,851 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:46,983 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:47,124 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:47,262 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:47,397 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:47,534 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:47,674 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:47,811 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:47,948 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:48,106 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:48,241 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:48,381 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:48,533 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:48,673 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:48,814 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:48,946 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:49,080 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:49,224 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:49,358 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:49,499 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:49,641 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:49,783 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:49,914 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:50,053 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:50,190 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:50,327 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:50,467 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:50,607 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:50,740 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:50,871 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:51,015 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:51,166 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:51,307 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:51,447 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:51,618 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:51,755 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:51,894 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:52,038 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:52,179 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:52,326 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:52,464 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:52,593 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:52,735 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:52,876 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:53,019 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:53,159 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:53,300 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:53,447 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:53,590 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:53,729 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:53,872 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,015 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,147 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,290 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,427 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,559 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,700 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,847 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:54,998 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:55,147 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:55,292 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-03-03 17:41:55,436 - ERROR - 获取北向资金数据失败: 抱歉，您没有接口访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。

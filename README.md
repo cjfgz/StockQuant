@@ -1,6 +1,82 @@
-# StockQuant
+# StockQuant - 股票量化交易系统
 
-一个基于 Python 的股票量化交易工具包。
+这是一个基于Python的股票量化交易系统，包含数据获取、技术分析、策略回测和自动交易功能。
+
+## 主要功能
+
+1. **数据获取**：使用BaoStock和新浪财经API获取股票历史数据和实时行情
+2. **技术分析**：计算常用技术指标（MA、MACD、RSI、KDJ等）
+3. **策略回测**：回测交易策略的历史表现
+4. **自动交易**：基于技术指标的自动交易系统
+
+## 文件说明
+
+- `auto_trade.py`: 自动交易脚本（需要pywin32和pywinauto）
+- `auto_trade_no_gui.py`: 不依赖GUI的自动交易脚本（不需要pywin32和pywinauto）
+- `test_stock_data.py`: 测试股票数据获取功能
+- `test_baostock.py`: 测试BaoStock API连接
+- `一年双回测的收益.py`: 策略回测脚本
+
+## 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+## 常见问题解决
+
+### pywin32 DLL加载失败
+
+如果遇到pywin32 DLL加载失败的问题，可以尝试以下解决方案：
+
+1. 重新安装pywin32：
+```bash
+pip uninstall pywin32
+pip install pywin32
+```
+
+2. 运行修复脚本：
+```bash
+python fix_pywin32.py
+```
+
+3. 使用不依赖GUI的版本：
+```bash
+python auto_trade_no_gui.py
+```
+
+### BaoStock API错误
+
+使用BaoStock API时，需要注意股票代码格式：
+
+- BaoStock格式：`sh.600000`、`sz.300616`（带点）
+- 新浪格式：`sh600000`、`sz300616`（不带点）
+
+## 使用示例
+
+### 测试股票数据获取
+
+```bash
+python test_stock_data.py
+```
+
+### 运行自动交易（模拟模式）
+
+```bash
+python auto_trade_no_gui.py
+```
+
+### 运行策略回测
+
+```bash
+python 一年双回测的收益.py
+```
+
+## 注意事项
+
+1. 自动交易功能仅供学习和研究使用，不构成投资建议
+2. 实盘交易前请充分测试策略
+3. 请遵守相关法律法规和交易所规则
 
 ## 功能特点
 
@@ -214,7 +290,4 @@ kline = Market.kline("sh601003", "1d")
 |       `移动平均线`       |       `MA(20, 30, kline=kline)`       |                          `一维数组`                          |
 |   `指数平滑异同平均线`   |    `MACD(14, 26, 9, kline=kline)`     |     `{'DIF': DIF数组, 'DEA': DEA数组, 'MACD': MACD数组}`     |
 |       `指数平均数`       |      `EMA(20, 30, kline=kline)`       |                          `一维数组`                          |
-| `考夫曼自适应移动平均线` |      `KAMA(20, 30, kline=kline)`      |                          `一维数组`                          |
-|        `随机指标`        |     `KDJ(20, 30, 9, kline=kline)`     |               `{'k': k值数组， 'd': d值数组}`                |
-|       `周期最低价`       |       `LOWEST(20, kline=kline)`       |                          `一维数组`                          |
-|         `能量潮`         |          `OBV(kline=kline)`           |                          `
+| `

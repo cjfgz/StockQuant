@@ -1,0 +1,21 @@
+{
+    "LOG": {
+        "level": "debug",
+        "handler": "stream"
+    },
+    "DINGTALK": {
+        "webhook": "https://oapi.dingtalk.com/robot/send?access_token=576e97c9acda5aa7d328e762334b8aebaf56cf5977dd6216d4a61572e10f9885",
+        "secret": ""
+    },
+    "TUSHARE": {
+        "token": "b097f86043c6f0860d20de8978e988db375113f4250c6f263886d1a3"
+    },
+    "SENDMAIL": {
+        "from" : "184733657@qq.com",
+        "password" : "",
+        "to" : "iloveyou@icloud.com",
+        "server" : "smtp.qq.com",
+        "port": 587
+    },
+    "tushare_token": "b097f86043c6f0860d20de8978e988db375113f4250c6f263886d1a3"
+}

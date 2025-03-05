@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能选股系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container { max-width: 1200px; margin: 20px auto; }
+        .card { margin-bottom: 20px; }
+        .table th { background-color: #f8f9fa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">智能选股系统</h2>
+
+        <!-- 股票查询卡片 -->
+        <div class="card mb-4">
+            <div class="card-header">
+                股票查询
+            </div>
+            <div class="card-body">
+                <form id="queryForm" class="row g-3">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="stockCode" placeholder="输入股票代码" required>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">查询</button>
+                    </div>
+                </form>
+                <div id="queryResult" class="mt-3" style="display: none;">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th width="100">股票代码</th>
+                            <td id="resultCode"></td>
+                            <th width="100">股票名称</th>
+                            <td id="resultName"></td>
+                        </tr>
+                        <tr>
+                            <th>当前价格</th>
+                            <td id="resultPrice"></td>
+                            <th>涨跌幅</th>
+                            <td id="resultChange"></td>
+                        </tr>
+                        <tr>
+                            <th>成交量</th>
+                            <td id="resultVolume"></td>
+                            <th>换手率</th>
+                            <td id="resultTurnover"></td>
+                        </tr>
+                        <tr>
+                            <th>流通市值</th>
+                            <td colspan="3" id="resultCircMv"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 选股条件设置 -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">选股条件设置</h5>
+            </div>
+            <div class="card-body">
+                <form id="conditionForm">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">股价上限(元)</label>
+                            <input type="number" class="form-control" id="maxPrice" value="100">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">最小成交量(万)</label>
+                            <input type="number" class="form-control" id="minVolume" value="100">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">涨幅范围(%)</label>
+                            <input type="number" class="form-control" id="upPercent" value="9.8">
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">更新条件</button>
+                        <button type="button" class="btn btn-success ms-2" id="scanBtn">开始选股</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 选股结果 -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">选股结果</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>名称</th>
+                                <th>现价</th>
+                                <th>成交量(万)</th>
+                                <th>成交额(万)</th>
+                                <th>涨跌幅(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 在 body 中添加加载提示 -->
+    <div class="modal fade" id="loadingModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="spinner-border text-primary mb-3" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <h5 id="loadingText">正在执行选股...</h5>
+                    <small class="text-muted" id="loadingDetail"></small>
+                    <!-- 添加错误信息显示区域 -->
+                    <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;"></div>
+                </div>
+                <div class="modal-footer" style="display: none;" id="modalFooter">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="retryButton">重试</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 获取当前选股条件
+        async function getConditions() {
+            try {
+                const response = await fetch('/api/stock/conditions');
+                const data = await response.json();
+
+                document.getElementById('maxPrice').value = data.max_price;
+                document.getElementById('minVolume').value = data.min_volume;
+                document.getElementById('upPercent').value = data.up_percent;
+            } catch (error) {
+                console.error('获取选股条件失败:', error);
+            }
+        }
+
+        // 更新选股条件
+        document.getElementById('conditionForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const conditions = {
+                max_price: parseFloat(document.getElementById('maxPrice').value),
+                min_volume: parseFloat(document.getElementById('minVolume').value),
+                up_percent: parseFloat(document.getElementById('upPercent').value)
+            };
+
+            try {
+                const response = await fetch('/api/stock/conditions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(conditions)
+                });
+
+                const data = await response.json();
+                alert(data.message || '更新成功');
+            } catch (error) {
+                console.error('更新选股条件失败:', error);
+                alert('更新失败');
+            }
+        });
+
+        // 执行选股
+        async function performStockScan() {
+            const loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
+            const errorDiv = document.getElementById('errorMessage');
+            const modalFooter = document.getElementById('modalFooter');
+            const loadingText = document.getElementById('loadingText');
+
+            try {
+                // 重置模态框状态
+                errorDiv.style.display = 'none';
+                modalFooter.style.display = 'none';
+                loadingText.textContent = '正在执行选股...';
+                loadingModal.show();
+
+                const startTime = Date.now();
+
+                const response = await fetch('/api/stock/scan', {
+                    method: 'POST'
+                });
+
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                    updateResultTable(data.stocks);
+                    loadingModal.hide();
+                    alert(`选股完成！\n用时：${duration}秒\n找到：${data.count}只股票`);
+                } else {
+                    throw new Error(data.error || '选股失败');
+                }
+            } catch (error) {
+                console.error('选股失败:', error);
+                // 显示错误信息
+                errorDiv.textContent = `选股失败: ${error.message}`;
+                errorDiv.style.display = 'block';
+                loadingText.textContent = '选股过程中出现错误';
+                modalFooter.style.display = 'flex';
+            }
+        }
+
+        // 添加选股按钮事件监听
+        document.getElementById('scanBtn').addEventListener('click', performStockScan);
+
+        // 添加重试按钮事件监听
+        document.getElementById('retryButton').addEventListener('click', async () => {
+            const modalFooter = document.getElementById('modalFooter');
+            const errorDiv = document.getElementById('errorMessage');
+
+            // 隐藏错误信息和按钮
+            errorDiv.style.display = 'none';
+            modalFooter.style.display = 'none';
+
+            // 重新执行选股
+            await performStockScan();
+        });
+
+        // 更新结果表格
+        function updateResultTable(stocks) {
+            const tbody = document.getElementById('resultTable');
+            tbody.innerHTML = '';
+
+            stocks.forEach(stock => {
+                const row = document.createElement('tr');
+                const change = ((stock.price - stock.close) / stock.close * 100).toFixed(2);
+
+                row.innerHTML = `
+                    <td>${stock.code}</td>
+                    <td>${stock.name}</td>
+                    <td>${stock.price}</td>
+                    <td>${(stock.volume/10000).toFixed(2)}</td>
+                    <td>${(stock.amount/10000).toFixed(2)}</td>
+                    <td class="${change >= 0 ? 'text-danger' : 'text-success'}">${change}%</td>
+                `;
+
+                tbody.appendChild(row);
+            });
+        }
+
+        // 页面加载时获取当前条件
+        document.addEventListener('DOMContentLoaded', getConditions);
+
+        // 添加股票查询功能
+        document.getElementById('queryForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const stockCode = document.getElementById('stockCode').value.trim();
+            if (!stockCode) {
+                alert('请输入股票代码');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/stock/query?code=${stockCode}`);
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    // 显示结果
+                    document.getElementById('queryResult').style.display = 'block';
+                    document.getElementById('resultCode').textContent = data.data.code;
+                    document.getElementById('resultName').textContent = data.data.name;
+                    document.getElementById('resultPrice').textContent = `${data.data.price.toFixed(2)}元`;
+                    document.getElementById('resultChange').textContent = `${data.data.change.toFixed(2)}%`;
+                    document.getElementById('resultVolume').textContent = `${(data.data.volume/10000).toFixed(2)}万`;
+                    document.getElementById('resultTurnover').textContent = `${data.data.turnover.toFixed(2)}%`;
+                    document.getElementById('resultCircMv').textContent = `${(data.data.circ_mv/10000).toFixed(2)}亿`;
+
+                    // 根据涨跌幅设置颜色
+                    const changeElement = document.getElementById('resultChange');
+                    const change = data.data.change;
+                    if (change > 0) {
+                        changeElement.style.color = 'red';
+                        changeElement.textContent = `+${change.toFixed(2)}%`;
+                    } else if (change < 0) {
+                        changeElement.style.color = 'green';
+                    } else {
+                        changeElement.style.color = 'black';
+                    }
+                } else {
+                    alert(data.message || '查询失败');
+                }
+            } catch (error) {
+                console.error('查询失败:', error);
+                alert('查询失败，请检查股票代码是否正确');
+            }
+        });
+    </script>
+
+    <!-- 添加 Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
