@@ -86,44 +86,23 @@ class ValueFactorStrategy:
     def get_stock_list(self):
         """获取股票列表"""
         try:
-            # 首先尝试使用tushare获取
-            for retry in range(self.max_retries):
-                try:
-                    df = self.pro.stock_basic(
-                        exchange='',
-                        list_status='L',
-                        fields='ts_code,symbol,name,industry'
-                    )
-                    if not df.empty:
-                        # 转换tushare代码为baostock格式
-                        df['code'] = df.apply(lambda row: 
-                            f"sh.{row['ts_code'].split('.')[0]}" if row['ts_code'].endswith('SH') 
-                            else f"sz.{row['ts_code'].split('.')[0]}", axis=1)
-                        df['name'] = df['name'].astype(str)  # 确保name列为字符串类型
-                        df['industry'] = df['industry'].astype(str)  # 确保industry列为字符串类型
-                        return df[['code', 'name', 'industry']]  # 只保留需要的列
-                except Exception as e:
-                    self.logger.warning(f"Tushare获取股票列表失败，尝试使用BaoStock: {str(e)}")
-                    time.sleep(self.retry_delay)
-            
-            # 如果tushare失败，使用baostock作为备选
-            rs = bs.query_stock_basic()
+            # 获取沪深300成分股
+            rs = bs.query_hs300_stocks()
             if rs.error_code != '0':
-                self.logger.error(f"获取股票列表失败: {rs.error_msg}")
+                self.logger.error(f"获取沪深300成分股失败: {rs.error_msg}")
                 return None
                 
             data_list = []
             while (rs.error_code == '0') & rs.next():
                 row = rs.get_row_data()
-                # 只选择A股
-                if row[0].startswith('sh.6') or row[0].startswith('sz.0') or row[0].startswith('sz.3'):
-                    data_list.append({
-                        'code': row[0],
-                        'name': row[1],
-                        'industry': row[16] if len(row) > 16 else ''
-                    })
+                data_list.append({
+                    'code': row[1],
+                    'name': row[2],
+                    'industry': ''
+                })
                 
             df = pd.DataFrame(data_list)
+            self.logger.info(f"获取到 {len(df)} 只沪深300成分股")
             return df
             
         except Exception as e:
@@ -417,4 +396,4 @@ class ValueFactorStrategy:
             
 if __name__ == "__main__":
     strategy = ValueFactorStrategy()
-    strategy.run() 
+    strategy.run()

@@ -28,7 +28,7 @@ class NorthMoneyStrategy:
         # 初始化钉钉
         self.ding = DingTalk()
         
-        # 策略参数
+    # 策略参数
         self.north_increase_days = 5     # 北向连续增持天数
         self.min_increase_pct = 0.05     # 北向持股增幅阈值
         self.earnings_growth = 0.50      # 业绩预增最低幅度

@@ -1,0 +1,338 @@
+2025-03-09 18:05:23,429 - INFO - 银河证券自动交易系统启动...
+2025-03-09 18:05:23,429 - INFO - 配置文件加载成功
+2025-03-09 18:05:23,429 - INFO - 开始运行演示...
+2025-03-09 18:05:23,429 - INFO - 开始登录银河证券客户端...
+2025-03-09 18:05:24,826 - ERROR - 登录失败: Could not create the process "C:\中国银河证券双子星3.2\Binarystar.exe"
+Error returned by CreateProcess: (2, 'CreateProcess', '系统找不到指定的文件。')
+2025-03-09 18:05:24,827 - ERROR - Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1424, in process_from_module
+    raise ProcessNotFoundError(message)
+pywinauto.application.ProcessNotFoundError: Could not find any accessible process with a module of 'C:\中国银河证券双子星3.2\xiadan.exe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 955, in connect
+    ProcessNotFoundError, kwargs['path'],
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\easytrader\yh_clienttrader.py", line 38, in login
+    path=self._run_exe_path(exe_path), timeout=1
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 958, in connect
+    raise ProcessNotFoundError('Process "{}" not found!'.format(kwargs['path']))
+pywinauto.application.ProcessNotFoundError: Process "C:\中国银河证券双子星3.2\xiadan.exe" not found!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1024, in start
+    start_info)				# STARTUPINFO structure.
+pywintypes.error: (2, 'CreateProcess', '系统找不到指定的文件。')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "银河证券自动交易_fixed.py", line 97, in login
+    comm_password=self.comm_password
+  File "D:\ProgramData\Anaconda3\lib\site-packages\easytrader\yh_clienttrader.py", line 42, in login
+    self._app = pywinauto.Application().start(exe_path)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1029, in start
+    raise AppStartError(message)
+pywinauto.application.AppStartError: Could not create the process "C:\中国银河证券双子星3.2\Binarystar.exe"
+Error returned by CreateProcess: (2, 'CreateProcess', '系统找不到指定的文件。')
+
+2025-03-09 18:05:24,830 - INFO - 银河证券自动交易系统退出
+2025-03-09 18:07:11,915 - INFO - 银河证券自动交易系统启动...
+2025-03-09 18:07:11,916 - INFO - 配置文件加载成功
+2025-03-09 18:07:11,916 - INFO - 开始运行演示...
+2025-03-09 18:07:11,916 - INFO - 开始登录银河证券客户端...
+2025-03-09 18:07:13,254 - ERROR - 登录失败: Could not create the process "C:\中国银河证券双子星3.2\Binarystar.exe"
+Error returned by CreateProcess: (2, 'CreateProcess', '系统找不到指定的文件。')
+2025-03-09 18:07:13,255 - ERROR - Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1424, in process_from_module
+    raise ProcessNotFoundError(message)
+pywinauto.application.ProcessNotFoundError: Could not find any accessible process with a module of 'C:\中国银河证券双子星3.2\xiadan.exe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 955, in connect
+    ProcessNotFoundError, kwargs['path'],
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\easytrader\yh_clienttrader.py", line 38, in login
+    path=self._run_exe_path(exe_path), timeout=1
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 958, in connect
+    raise ProcessNotFoundError('Process "{}" not found!'.format(kwargs['path']))
+pywinauto.application.ProcessNotFoundError: Process "C:\中国银河证券双子星3.2\xiadan.exe" not found!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1024, in start
+    start_info)				# STARTUPINFO structure.
+pywintypes.error: (2, 'CreateProcess', '系统找不到指定的文件。')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Administrator/Documents/GitHub/StockQuant/银河证券自动交易_fixed.py", line 97, in login
+    comm_password=self.comm_password
+  File "D:\ProgramData\Anaconda3\lib\site-packages\easytrader\yh_clienttrader.py", line 42, in login
+    self._app = pywinauto.Application().start(exe_path)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1029, in start
+    raise AppStartError(message)
+pywinauto.application.AppStartError: Could not create the process "C:\中国银河证券双子星3.2\Binarystar.exe"
+Error returned by CreateProcess: (2, 'CreateProcess', '系统找不到指定的文件。')
+
+2025-03-09 18:07:13,258 - INFO - 银河证券自动交易系统退出
+2025-03-09 18:19:26,760 - INFO - 银河证券自动交易系统启动...
+2025-03-09 18:19:26,760 - INFO - 配置文件加载成功
+2025-03-09 18:19:26,761 - INFO - 开始运行演示...
+2025-03-09 18:19:26,761 - INFO - 开始登录银河证券客户端...
+2025-03-09 18:19:27,949 - ERROR - 登录失败: Could not create the process "C:\中国银河证券双子星3.2\Binarystar.exe"
+Error returned by CreateProcess: (2, 'CreateProcess', '系统找不到指定的文件。')
+2025-03-09 18:19:27,950 - ERROR - Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1424, in process_from_module
+    raise ProcessNotFoundError(message)
+pywinauto.application.ProcessNotFoundError: Could not find any accessible process with a module of 'C:\中国银河证券双子星3.2\xiadan.exe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 955, in connect
+    ProcessNotFoundError, kwargs['path'],
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\easytrader\yh_clienttrader.py", line 38, in login
+    path=self._run_exe_path(exe_path), timeout=1
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 958, in connect
+    raise ProcessNotFoundError('Process "{}" not found!'.format(kwargs['path']))
+pywinauto.application.ProcessNotFoundError: Process "C:\中国银河证券双子星3.2\xiadan.exe" not found!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1024, in start
+    start_info)				# STARTUPINFO structure.
+pywintypes.error: (2, 'CreateProcess', '系统找不到指定的文件。')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Administrator/Documents/GitHub/StockQuant/银河证券自动交易_fixed.py", line 98, in login
+    comm_password=self.comm_password
+  File "D:\ProgramData\Anaconda3\lib\site-packages\easytrader\yh_clienttrader.py", line 42, in login
+    self._app = pywinauto.Application().start(exe_path)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\pywinauto\application.py", line 1029, in start
+    raise AppStartError(message)
+pywinauto.application.AppStartError: Could not create the process "C:\中国银河证券双子星3.2\Binarystar.exe"
+Error returned by CreateProcess: (2, 'CreateProcess', '系统找不到指定的文件。')
+
+2025-03-09 18:19:27,952 - INFO - 银河证券自动交易系统退出
+2025-03-09 18:20:54,021 - INFO - 银河证券自动交易系统启动...
+2025-03-09 18:20:54,022 - INFO - 配置文件加载成功
+2025-03-09 18:20:54,022 - INFO - 开始回测 sh.600000，时间段: 2022-01-01 至 2022-12-31
+2025-03-09 18:20:54,022 - ERROR - 程序运行出错: 'YHAutoTrader' object has no attribute 'get_backtest_data'
+2025-03-09 18:20:54,023 - ERROR - Traceback (most recent call last):
+  File "银河证券自动交易_fixed.py", line 461, in main
+    trader.backtest(stock_code, start_date, end_date)
+  File "银河证券自动交易_fixed.py", line 292, in backtest
+    df = self.get_backtest_data(stock_code, start_date, end_date)
+AttributeError: 'YHAutoTrader' object has no attribute 'get_backtest_data'
+
+2025-03-09 18:27:11,800 - INFO - 银河证券自动交易系统启动...
+2025-03-09 18:27:11,801 - INFO - 配置文件加载成功
+2025-03-09 18:27:11,801 - INFO - 开始回测 sh.600000，时间段: 2022-01-01 至 2022-12-31
+2025-03-09 18:27:11,801 - INFO - 获取 sh.600000 从 2022-01-01 到 2022-12-31 的历史数据
+2025-03-09 18:27:12,447 - INFO - 成功获取 242 条历史数据
+2025-03-09 18:27:12,469 - INFO - 回测买入: 2022-02-18 00:00:00, 价格: 7.58124741, 数量: 13100
+2025-03-09 18:27:12,472 - INFO - 回测卖出: 2022-03-08 00:00:00, 价格: 7.06533784, 数量: 13100, 收益率: -6.81%
+2025-03-09 18:27:12,480 - INFO - 回测买入: 2022-05-20 00:00:00, 价格: 7.03036092, 数量: 13200
+2025-03-09 18:27:12,481 - INFO - 回测卖出: 2022-05-24 00:00:00, 价格: 6.89045324, 数量: 13200, 收益率: -1.99%
+2025-03-09 18:27:12,482 - INFO - 回测买入: 2022-05-27 00:00:00, 价格: 6.995384, 数量: 13000
+2025-03-09 18:27:12,488 - INFO - 回测卖出: 2022-07-06 00:00:00, 价格: 6.9079417, 数量: 13000, 收益率: -1.25%
+2025-03-09 18:27:12,494 - INFO - 回测买入: 2022-08-12 00:00:00, 价格: 6.68253448, 数量: 13500
+2025-03-09 18:27:12,496 - INFO - 回测卖出: 2022-08-24 00:00:00, 价格: 6.5994643, 数量: 13500, 收益率: -1.24%
+2025-03-09 18:27:12,497 - INFO - 回测买入: 2022-08-31 00:00:00, 价格: 6.71022454, 数量: 13200
+2025-03-09 18:27:12,500 - INFO - 回测卖出: 2022-09-19 00:00:00, 价格: 6.60869432, 数量: 13200, 收益率: -1.51%
+2025-03-09 18:27:12,509 - INFO - 回测买入: 2022-11-25 00:00:00, 价格: 6.61792434, 数量: 13200
+2025-03-09 18:27:12,512 - INFO - 回测卖出: 2022-12-15 00:00:00, 价格: 6.68253448, 数量: 13200, 收益率: 0.98%
+2025-03-09 18:27:12,523 - INFO - ==================================================
+2025-03-09 18:27:12,523 - INFO - 回测结果:
+2025-03-09 18:27:12,524 - INFO - 总收益率: -11.35%
+2025-03-09 18:27:12,524 - INFO - 年化收益率: -11.50%
+2025-03-09 18:27:12,524 - INFO - 最大回撤: 13.42%
+2025-03-09 18:27:12,524 - INFO - 夏普比率: -1.76
+2025-03-09 18:27:12,524 - INFO - 胜率: 16.67%
+2025-03-09 18:27:12,524 - INFO - 盈亏比: 0.38
+2025-03-09 18:27:12,524 - INFO - 交易次数: 6
+2025-03-09 18:27:12,525 - INFO - ==================================================
+2025-03-09 18:27:13,307 - INFO - 回测结果图表已保存为 backtest_result.png
+2025-03-09 18:27:20,710 - INFO - 银河证券自动交易系统退出
+2025-03-09 19:21:59,709 - INFO - 银河证券自动交易系统启动...
+2025-03-09 19:21:59,709 - INFO - 配置文件加载成功
+2025-03-09 19:21:59,709 - INFO - 开始回测 sh.600000，时间段: 2022-01-01 至 2022-12-31
+2025-03-09 19:21:59,710 - INFO - 获取 sh.600000 从 2022-01-01 到 2022-12-31 的历史数据
+2025-03-09 19:22:06,336 - INFO - 成功获取 242 条历史数据
+2025-03-09 19:22:06,353 - INFO - 回测买入: 2022-02-18 00:00:00, 价格: 7.58124741, 数量: 13100
+2025-03-09 19:22:06,355 - INFO - 回测卖出: 2022-03-08 00:00:00, 价格: 7.06533784, 数量: 13100, 收益率: -6.81%
+2025-03-09 19:22:06,364 - INFO - 回测买入: 2022-05-20 00:00:00, 价格: 7.03036092, 数量: 13200
+2025-03-09 19:22:06,365 - INFO - 回测卖出: 2022-05-24 00:00:00, 价格: 6.89045324, 数量: 13200, 收益率: -1.99%
+2025-03-09 19:22:06,365 - INFO - 回测买入: 2022-05-27 00:00:00, 价格: 6.995384, 数量: 13000
+2025-03-09 19:22:06,370 - INFO - 回测卖出: 2022-07-06 00:00:00, 价格: 6.9079417, 数量: 13000, 收益率: -1.25%
+2025-03-09 19:22:06,379 - INFO - 回测买入: 2022-08-12 00:00:00, 价格: 6.68253448, 数量: 13500
+2025-03-09 19:22:06,382 - INFO - 回测卖出: 2022-08-24 00:00:00, 价格: 6.5994643, 数量: 13500, 收益率: -1.24%
+2025-03-09 19:22:06,383 - INFO - 回测买入: 2022-08-31 00:00:00, 价格: 6.71022454, 数量: 13200
+2025-03-09 19:22:06,387 - INFO - 回测卖出: 2022-09-19 00:00:00, 价格: 6.60869432, 数量: 13200, 收益率: -1.51%
+2025-03-09 19:22:06,401 - INFO - 回测买入: 2022-11-25 00:00:00, 价格: 6.61792434, 数量: 13200
+2025-03-09 19:22:06,405 - INFO - 回测卖出: 2022-12-15 00:00:00, 价格: 6.68253448, 数量: 13200, 收益率: 0.98%
+2025-03-09 19:22:06,415 - INFO - ==================================================
+2025-03-09 19:22:06,415 - INFO - 回测结果:
+2025-03-09 19:22:06,415 - INFO - 总收益率: -11.35%
+2025-03-09 19:22:06,416 - INFO - 年化收益率: -11.50%
+2025-03-09 19:22:06,416 - INFO - 最大回撤: 13.42%
+2025-03-09 19:22:06,416 - INFO - 夏普比率: -1.76
+2025-03-09 19:22:06,416 - INFO - 胜率: 16.67%
+2025-03-09 19:22:06,416 - INFO - 盈亏比: 0.38
+2025-03-09 19:22:06,416 - INFO - 交易次数: 6
+2025-03-09 19:22:06,416 - INFO - ==================================================
+2025-03-09 19:22:06,754 - INFO - 回测结果图表已保存为 backtest_result.png
+2025-03-09 19:22:09,820 - INFO - 银河证券自动交易系统退出
+2025-03-09 19:34:03,369 - INFO - 银河证券自动交易系统启动...
+2025-03-09 19:34:03,369 - INFO - 配置文件加载成功
+2025-03-09 19:34:03,369 - INFO - 开始回测 sh.600000，时间段: 2022-01-01 至 2022-12-31
+2025-03-09 19:34:03,369 - INFO - 获取 sh.600000 从 2022-01-01 到 2022-12-31 的历史数据
+2025-03-09 19:34:09,390 - INFO - 成功获取 242 条历史数据
+2025-03-09 19:34:09,407 - INFO - 回测买入: 2022-02-18 00:00:00, 价格: 7.58124741, 数量: 13100
+2025-03-09 19:34:09,409 - INFO - 回测卖出: 2022-03-08 00:00:00, 价格: 7.06533784, 数量: 13100, 收益率: -6.81%
+2025-03-09 19:34:09,418 - INFO - 回测买入: 2022-05-20 00:00:00, 价格: 7.03036092, 数量: 13200
+2025-03-09 19:34:09,419 - INFO - 回测卖出: 2022-05-24 00:00:00, 价格: 6.89045324, 数量: 13200, 收益率: -1.99%
+2025-03-09 19:34:09,420 - INFO - 回测买入: 2022-05-27 00:00:00, 价格: 6.995384, 数量: 13000
+2025-03-09 19:34:09,428 - INFO - 回测卖出: 2022-07-06 00:00:00, 价格: 6.9079417, 数量: 13000, 收益率: -1.25%
+2025-03-09 19:34:09,433 - INFO - 回测买入: 2022-08-12 00:00:00, 价格: 6.68253448, 数量: 13500
+2025-03-09 19:34:09,436 - INFO - 回测卖出: 2022-08-24 00:00:00, 价格: 6.5994643, 数量: 13500, 收益率: -1.24%
+2025-03-09 19:34:09,438 - INFO - 回测买入: 2022-08-31 00:00:00, 价格: 6.71022454, 数量: 13200
+2025-03-09 19:34:09,440 - INFO - 回测卖出: 2022-09-19 00:00:00, 价格: 6.60869432, 数量: 13200, 收益率: -1.51%
+2025-03-09 19:34:09,449 - INFO - 回测买入: 2022-11-25 00:00:00, 价格: 6.61792434, 数量: 13200
+2025-03-09 19:34:09,452 - INFO - 回测卖出: 2022-12-15 00:00:00, 价格: 6.68253448, 数量: 13200, 收益率: 0.98%
+2025-03-09 19:34:09,464 - INFO - ==================================================
+2025-03-09 19:34:09,464 - INFO - 回测结果:
+2025-03-09 19:34:09,464 - INFO - 总收益率: -11.35%
+2025-03-09 19:34:09,464 - INFO - 年化收益率: -11.50%
+2025-03-09 19:34:09,465 - INFO - 最大回撤: 13.42%
+2025-03-09 19:34:09,465 - INFO - 夏普比率: -1.76
+2025-03-09 19:34:09,465 - INFO - 胜率: 16.67%
+2025-03-09 19:34:09,465 - INFO - 盈亏比: 0.38
+2025-03-09 19:34:09,465 - INFO - 交易次数: 6
+2025-03-09 19:34:09,466 - INFO - ==================================================
+2025-03-09 19:34:09,781 - INFO - 回测结果图表已保存为 backtest_result.png
+2025-03-09 19:34:12,713 - INFO - 银河证券自动交易系统退出
+2025-03-09 19:34:58,664 - INFO - 银河证券自动交易系统启动...
+2025-03-09 19:34:58,665 - INFO - 配置文件加载成功
+2025-03-09 19:34:58,665 - INFO - 开始回测 sh.600000，时间段: 2022-01-01 至 2022-12-31
+2025-03-09 19:34:58,665 - INFO - 获取 sh.600000 从 2022-01-01 到 2022-12-31 的历史数据
+2025-03-09 19:34:58,888 - INFO - 成功获取 242 条历史数据
+2025-03-09 19:34:58,906 - INFO - 回测买入: 2022-02-18 00:00:00, 价格: 7.58124741, 数量: 13100
+2025-03-09 19:34:58,908 - INFO - 回测卖出: 2022-03-08 00:00:00, 价格: 7.06533784, 数量: 13100, 收益率: -6.81%
+2025-03-09 19:34:58,919 - INFO - 回测买入: 2022-05-20 00:00:00, 价格: 7.03036092, 数量: 13200
+2025-03-09 19:34:58,920 - INFO - 回测卖出: 2022-05-24 00:00:00, 价格: 6.89045324, 数量: 13200, 收益率: -1.99%
+2025-03-09 19:34:58,921 - INFO - 回测买入: 2022-05-27 00:00:00, 价格: 6.995384, 数量: 13000
+2025-03-09 19:34:58,926 - INFO - 回测卖出: 2022-07-06 00:00:00, 价格: 6.9079417, 数量: 13000, 收益率: -1.25%
+2025-03-09 19:34:58,931 - INFO - 回测买入: 2022-08-12 00:00:00, 价格: 6.68253448, 数量: 13500
+2025-03-09 19:34:58,934 - INFO - 回测卖出: 2022-08-24 00:00:00, 价格: 6.5994643, 数量: 13500, 收益率: -1.24%
+2025-03-09 19:34:58,935 - INFO - 回测买入: 2022-08-31 00:00:00, 价格: 6.71022454, 数量: 13200
+2025-03-09 19:34:58,937 - INFO - 回测卖出: 2022-09-19 00:00:00, 价格: 6.60869432, 数量: 13200, 收益率: -1.51%
+2025-03-09 19:34:58,946 - INFO - 回测买入: 2022-11-25 00:00:00, 价格: 6.61792434, 数量: 13200
+2025-03-09 19:34:58,949 - INFO - 回测卖出: 2022-12-15 00:00:00, 价格: 6.68253448, 数量: 13200, 收益率: 0.98%
+2025-03-09 19:34:58,958 - INFO - ==================================================
+2025-03-09 19:34:58,959 - INFO - 回测结果:
+2025-03-09 19:34:58,959 - INFO - 总收益率: -11.35%
+2025-03-09 19:34:58,959 - INFO - 年化收益率: -11.50%
+2025-03-09 19:34:58,959 - INFO - 最大回撤: 13.42%
+2025-03-09 19:34:58,959 - INFO - 夏普比率: -1.76
+2025-03-09 19:34:58,959 - INFO - 胜率: 16.67%
+2025-03-09 19:34:58,960 - INFO - 盈亏比: 0.38
+2025-03-09 19:34:58,960 - INFO - 交易次数: 6
+2025-03-09 19:34:58,960 - INFO - ==================================================
+2025-03-09 19:34:59,277 - INFO - 回测结果图表已保存为 backtest_result.png
+2025-03-09 19:35:01,060 - INFO - 银河证券自动交易系统退出
+2025-03-09 20:55:21,963 - INFO - 银河证券自动交易系统启动...
+2025-03-09 20:55:21,963 - INFO - 配置文件加载成功
+2025-03-09 20:55:21,964 - INFO - 开始回测 sh.600000，时间段: 2022-01-01 至 2022-12-31
+2025-03-09 20:55:21,964 - INFO - 获取 sh.600000 从 2022-01-01 到 2022-12-31 的历史数据
+2025-03-09 20:55:22,804 - INFO - 成功获取 242 条历史数据
+2025-03-09 20:55:22,823 - INFO - 回测买入: 2022-02-18 00:00:00, 价格: 7.58124741, 数量: 13100
+2025-03-09 20:55:22,825 - INFO - 回测卖出: 2022-03-08 00:00:00, 价格: 7.06533784, 数量: 13100, 收益率: -6.81%
+2025-03-09 20:55:22,833 - INFO - 回测买入: 2022-05-20 00:00:00, 价格: 7.03036092, 数量: 13200
+2025-03-09 20:55:22,834 - INFO - 回测卖出: 2022-05-24 00:00:00, 价格: 6.89045324, 数量: 13200, 收益率: -1.99%
+2025-03-09 20:55:22,835 - INFO - 回测买入: 2022-05-27 00:00:00, 价格: 6.995384, 数量: 13000
+2025-03-09 20:55:22,840 - INFO - 回测卖出: 2022-07-06 00:00:00, 价格: 6.9079417, 数量: 13000, 收益率: -1.25%
+2025-03-09 20:55:22,846 - INFO - 回测买入: 2022-08-12 00:00:00, 价格: 6.68253448, 数量: 13500
+2025-03-09 20:55:22,847 - INFO - 回测卖出: 2022-08-24 00:00:00, 价格: 6.5994643, 数量: 13500, 收益率: -1.24%
+2025-03-09 20:55:22,849 - INFO - 回测买入: 2022-08-31 00:00:00, 价格: 6.71022454, 数量: 13200
+2025-03-09 20:55:22,851 - INFO - 回测卖出: 2022-09-19 00:00:00, 价格: 6.60869432, 数量: 13200, 收益率: -1.51%
+2025-03-09 20:55:22,860 - INFO - 回测买入: 2022-11-25 00:00:00, 价格: 6.61792434, 数量: 13200
+2025-03-09 20:55:22,862 - INFO - 回测卖出: 2022-12-15 00:00:00, 价格: 6.68253448, 数量: 13200, 收益率: 0.98%
+2025-03-09 20:55:22,871 - INFO - ==================================================
+2025-03-09 20:55:22,871 - INFO - 回测结果:
+2025-03-09 20:55:22,872 - INFO - 总收益率: -11.35%
+2025-03-09 20:55:22,872 - INFO - 年化收益率: -11.50%
+2025-03-09 20:55:22,872 - INFO - 最大回撤: 13.42%
+2025-03-09 20:55:22,872 - INFO - 夏普比率: -1.76
+2025-03-09 20:55:22,872 - INFO - 胜率: 16.67%
+2025-03-09 20:55:22,872 - INFO - 盈亏比: 0.38
+2025-03-09 20:55:22,872 - INFO - 交易次数: 6
+2025-03-09 20:55:22,872 - INFO - ==================================================
+2025-03-09 20:55:23,176 - INFO - 回测结果图表已保存为 backtest_result.png
+2025-03-09 20:55:29,678 - INFO - 银河证券自动交易系统退出
+2025-03-10 21:37:22,413 - INFO - 银河证券自动交易系统启动...
+2025-03-10 21:37:22,414 - INFO - 配置文件加载成功
+2025-03-10 21:37:22,414 - INFO - 开始回测 sh.600000，时间段: 2022-01-01 至 2022-12-31
+2025-03-10 21:37:22,414 - INFO - 获取 sh.600000 从 2022-01-01 到 2022-12-31 的历史数据
+2025-03-10 21:37:23,834 - INFO - 成功获取 242 条历史数据
+2025-03-10 21:37:23,853 - INFO - 回测买入: 2022-02-18 00:00:00, 价格: 7.58124741, 数量: 13100
+2025-03-10 21:37:23,855 - INFO - 回测卖出: 2022-03-08 00:00:00, 价格: 7.06533784, 数量: 13100, 收益率: -6.81%
+2025-03-10 21:37:23,867 - INFO - 回测买入: 2022-05-20 00:00:00, 价格: 7.03036092, 数量: 13200
+2025-03-10 21:37:23,868 - INFO - 回测卖出: 2022-05-24 00:00:00, 价格: 6.89045324, 数量: 13200, 收益率: -1.99%
+2025-03-10 21:37:23,869 - INFO - 回测买入: 2022-05-27 00:00:00, 价格: 6.995384, 数量: 13000
+2025-03-10 21:37:23,874 - INFO - 回测卖出: 2022-07-06 00:00:00, 价格: 6.9079417, 数量: 13000, 收益率: -1.25%
+2025-03-10 21:37:23,881 - INFO - 回测买入: 2022-08-12 00:00:00, 价格: 6.68253448, 数量: 13500
+2025-03-10 21:37:23,883 - INFO - 回测卖出: 2022-08-24 00:00:00, 价格: 6.5994643, 数量: 13500, 收益率: -1.24%
+2025-03-10 21:37:23,884 - INFO - 回测买入: 2022-08-31 00:00:00, 价格: 6.71022454, 数量: 13200
+2025-03-10 21:37:23,887 - INFO - 回测卖出: 2022-09-19 00:00:00, 价格: 6.60869432, 数量: 13200, 收益率: -1.51%
+2025-03-10 21:37:23,897 - INFO - 回测买入: 2022-11-25 00:00:00, 价格: 6.61792434, 数量: 13200
+2025-03-10 21:37:23,902 - INFO - 回测卖出: 2022-12-15 00:00:00, 价格: 6.68253448, 数量: 13200, 收益率: 0.98%
+2025-03-10 21:37:23,920 - INFO - ==================================================
+2025-03-10 21:37:23,920 - INFO - 回测结果:
+2025-03-10 21:37:23,920 - INFO - 总收益率: -11.35%
+2025-03-10 21:37:23,921 - INFO - 年化收益率: -11.50%
+2025-03-10 21:37:23,921 - INFO - 最大回撤: 13.42%
+2025-03-10 21:37:23,921 - INFO - 夏普比率: -1.76
+2025-03-10 21:37:23,921 - INFO - 胜率: 16.67%
+2025-03-10 21:37:23,921 - INFO - 盈亏比: 0.38
+2025-03-10 21:37:23,921 - INFO - 交易次数: 6
+2025-03-10 21:37:23,921 - INFO - ==================================================
+2025-03-10 21:37:24,587 - INFO - 回测结果图表已保存为 backtest_result.png
+2025-03-10 21:37:26,277 - INFO - 银河证券自动交易系统退出

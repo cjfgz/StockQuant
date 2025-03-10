@@ -205,7 +205,7 @@ class DualMABacktest:
                 return False
                 
             return True
-            
+
         except Exception as e:
             self.logger.error(f"检查市场条件失败: {str(e)}")
             return False
@@ -333,7 +333,7 @@ class DualMABacktest:
         try:
             # 计算每日收益
             self.data.loc[:, 'returns'] = np.log(self.data['close'] / self.data['close'].shift(1))
-            
+
             # 计算策略收益
             self.data.loc[:, 'strategy_returns'] = self.data['signal'].shift(1) * self.data['returns']
             
@@ -341,7 +341,7 @@ class DualMABacktest:
             trade_cost = 0.002  # 双向交易成本
             self.data.loc[:, 'cost'] = abs(self.data['position']) * trade_cost
             self.data.loc[:, 'strategy_returns_after_cost'] = self.data['strategy_returns'] - self.data['cost']
-            
+
             # 计算累计收益
             self.data.loc[:, 'cum_returns'] = self.data['returns'].cumsum()
             self.data.loc[:, 'cum_strategy_returns'] = self.data['strategy_returns_after_cost'].cumsum()
@@ -364,7 +364,7 @@ class DualMABacktest:
             
             # 计算年化收益率
             annual_returns = (1 + total_returns) ** (trading_days_per_year / days) - 1
-            
+
             # 计算夏普比率
             daily_returns = self.data['strategy_returns_after_cost'].dropna()
             if len(daily_returns) > 0:
@@ -372,13 +372,13 @@ class DualMABacktest:
                 sharpe_ratio = np.sqrt(trading_days_per_year) * excess_returns.mean() / excess_returns.std() if excess_returns.std() != 0 else 0
             else:
                 sharpe_ratio = 0
-            
+
             # 计算最大回撤
             cum_returns = np.exp(self.data['cum_strategy_returns']) - 1
             running_max = cum_returns.cummax()
             drawdown = (running_max - cum_returns) / (1 + running_max)
             max_drawdown = drawdown.max()
-            
+
             # 计算交易统计
             trades = self.data[self.data['position'] != 0]
             total_trades = len(trades) // 2  # 每次交易包含买入和卖出两个操作
@@ -560,7 +560,7 @@ if __name__ == "__main__":
         short_window=short_window,
         long_window=long_window
     )
-    
+
     # 运行回测
     backtest.run_backtest()
 

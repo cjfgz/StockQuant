@@ -8,10 +8,36 @@ class BaoStockData:
 
     def __init__(self):
         # 登录系统
-        try:
-            bs.login()
-        except Exception as e:
-            logger.error(f"BaoStock登录失败: {str(e)}")
+        self.max_retries = 3
+        self.retry_delay = 2
+        self.timeout = 10
+        self.is_connected = False
+        self.connect_baostock()
+
+    def connect_baostock(self):
+        """连接BaoStock，带重试机制"""
+        for retry in range(self.max_retries):
+            try:
+                if retry > 0:
+                    logger.info(f"第{retry + 1}次尝试连接BaoStock...")
+                    time.sleep(self.retry_delay)
+                
+                lg = bs.login()
+                if lg.error_code != '0':
+                    logger.error(f"BaoStock登录失败: {lg.error_msg}")
+                    continue
+                    
+                self.is_connected = True
+                logger.info("BaoStock连接成功")
+                return True
+                
+            except Exception as e:
+                logger.error(f"BaoStock连接异常: {str(e)}")
+                if retry == self.max_retries - 1:
+                    logger.error("已达到最大重试次数，连接失败")
+                    
+        self.is_connected = False
+        return False
 
     def __del__(self):
         # 登出系统
@@ -22,30 +48,54 @@ class BaoStockData:
 
     def query_all_stock(self, day=None):
         """
-        获取所有股票列表
+        获取所有股票列表，带重试机制和数据验证
         :param day: 可选，日期，格式：YYYY-MM-DD，默认为最新交易日
         :return: 股票代码列表
         """
-        try:
-            # 获取证券基本资料
-            rs = bs.query_all_stock(day)
-            if rs.error_code != '0':
-                logger.error(f"获取股票列表失败: {rs.error_msg}")
-                return []
-                
-            # 处理数据
-            stock_list = []
-            while (rs.error_code == '0') & rs.next():
-                stock = rs.get_row_data()
-                # 只保留A股
-                if stock[0].startswith(('sh.6', 'sz.00', 'sz.30')):
-                    stock_list.append(stock[0])
-            
-            return stock_list
-            
-        except Exception as e:
-            logger.error(f"获取股票列表异常: {str(e)}")
+        if not self.check_connection():
             return []
+            
+        for retry in range(self.max_retries):
+            try:
+                if retry > 0:
+                    logger.info(f"第{retry + 1}次尝试获取股票列表...")
+                    time.sleep(self.retry_delay)
+                
+                # 获取证券基本资料
+                rs = bs.query_all_stock(day)
+                if rs.error_code != '0':
+                    logger.error(f"获取股票列表失败: {rs.error_msg}")
+                    continue
+                
+                # 处理数据
+                stock_list = []
+                while (rs.error_code == '0') & rs.next():
+                    try:
+                        stock = rs.get_row_data()
+                        # 数据有效性验证
+                        if not stock or len(stock) < 1:
+                            continue
+                            
+                        # 只保留A股
+                        if stock[0].startswith(('sh.6', 'sz.00', 'sz.30')):
+                            stock_list.append(stock[0])
+                    except Exception as e:
+                        logger.warning(f"处理单条股票数据异常: {str(e)}")
+                        continue
+                
+                # 验证获取的数据
+                if not stock_list:
+                    logger.warning("获取的股票列表为空")
+                else:
+                    logger.info(f"成功获取{len(stock_list)}只股票信息")
+                return stock_list
+                
+            except Exception as e:
+                logger.error(f"获取股票列表异常: {str(e)}")
+                if retry == self.max_retries - 1:
+                    logger.error("已达到最大重试次数，获取失败")
+                    
+        return []
 
     def query_trade_dates(self, start_date=None, end_date=None):
         """

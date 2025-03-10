@@ -91,13 +91,16 @@ class IndustryStockStrategy:
                 if row[3] == industry_name:
                     code = row[1]
                     # 处理股票代码格式
-                    if code.startswith('6'):
-                        code = f'sh.{code}'
-                    elif code.startswith(('0', '3')):
-                        code = f'sz.{code}'
-                    else:
-                        continue
-                    industry_stocks.append(code)
+                    if len(code) == 6:  # 确保是6位股票代码
+                        if code.startswith('6'):
+                            code = f'sh.{code}'
+                        elif code.startswith(('0', '3')):
+                            code = f'sz.{code}'
+                        else:
+                            continue
+                        industry_stocks.append(code)
+            
+            self.logger.info(f"行业{industry_name}共有{len(industry_stocks)}只股票")
             return industry_stocks
         except Exception as e:
             self.logger.error(f"获取行业{industry_name}成分股失败: {str(e)}")

@@ -5,18 +5,37 @@ from stockquant.tick import Tick
 class SinaData:
 
     def __init__(self):
-        pass
+        self.max_retries = 3
+        self.retry_delay = 2
+        self.timeout = 10
+        self.session = requests.Session()
 
-    @staticmethod
-    def get_realtime_data(symbol):
+    def get_realtime_data(self, symbol):
         """
-        获取指定股票的实时数据
+        获取指定股票的实时数据，带重试机制和数据验证
         :param symbol: 例如："sh601003"，或者"sz002307"，前者是沪市，后者是深市
-        :return:返回一个字典
+        :return:返回一个字典或None（如果获取失败）
         """
-        tick = Tick(symbol)
-        response = requests.get("http://hq.sinajs.cn/list=%s" % symbol).text
-        data = response.split(",")
+        for retry in range(self.max_retries):
+            try:
+                if retry > 0:
+                    logger.info(f"第{retry + 1}次尝试获取{symbol}实时数据...")
+                    time.sleep(self.retry_delay)
+                    
+                tick = Tick(symbol)
+                response = self.session.get(
+                    f"http://hq.sinajs.cn/list={symbol}",
+                    timeout=self.timeout
+                ).text
+                
+                if not response or len(response) < 10:
+                    logger.warning(f"获取{symbol}数据响应为空或无效")
+                    continue
+                    
+                data = response.split(",")
+                if len(data) < 30:
+                    logger.warning(f"获取{symbol}数据格式错误")
+                    continue
         tick.timestamp = data[-4] + " " + data[-3] if str(symbol).startswith("sh") else data[-3] + " " + data[-2]
         tick.symbol = data[0].replace('"', "").split("=")[1]
         tick.open = float(data[1])
