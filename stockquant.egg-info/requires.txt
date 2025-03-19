@@ -1,0 +1,9 @@
+pandas
+numpy
+requests
+concurrent-log-handler
+colorlog
+matplotlib
+tushare
+baostock
+easytrader

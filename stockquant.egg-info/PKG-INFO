@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: stockquant
+Version: 0.1
+Summary: Professional quant framework
+Home-page: https://github.com/Gary-Hertel/StockQuant
+Author: Gary-Hertel
+Author-email: garyhertel@foxmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: stockquant,quant,framework
+Platform: any

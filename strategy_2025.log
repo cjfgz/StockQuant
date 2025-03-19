@@ -8,3 +8,4 @@
 2025-03-09 10:58:34,812 - ERROR - 计算技术指标出错: 'DataFrame' object has no attribute 'ta'
 2025-03-09 10:58:44,960 - ERROR - 计算技术指标出错: 'DataFrame' object has no attribute 'ta'
 2025-03-09 10:58:55,070 - ERROR - 计算技术指标出错: 'DataFrame' object has no attribute 'ta'
+2025-03-12 19:48:51,321 - INFO - 开始运行2025年策略...

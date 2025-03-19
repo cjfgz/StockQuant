@@ -9,4 +9,9 @@ pandas-ta>=0.3.14b0
 setuptools>=40.0.0
 concurrent-log-handler>=0.9.24
 pywin32>=300 ; platform_system=="Windows"
-pywinauto>=0.6.8 ; platform_system=="Windows" 
+pywinauto>=0.6.8 ; platform_system=="Windows"
+seaborn
+scikit-learn
+statsmodels
+logging
+dingtalk-sdk 

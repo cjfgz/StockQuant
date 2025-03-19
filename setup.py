@@ -1,19 +1,12 @@
 # -*- coding:utf-8 -*-
 
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup, find_packages
 
 
 setup(
     name="stockquant",
-    version="1.2.0",
-    packages=[
-        "stockquant",
-        "stockquant/source",
-        "stockquant/utils"
-    ],
+    version="0.1",
+    packages=find_packages(),
     platforms="any",
     description="Professional quant framework",
     url="https://github.com/Gary-Hertel/StockQuant",
@@ -24,11 +17,11 @@ setup(
         "stockquant", "quant", "framework"
     ],
     install_requires=[
+        "pandas",
         "numpy",
         "requests",
         "concurrent-log-handler",
         "colorlog",
-        "pandas",
         "matplotlib",
         "tushare",
         "baostock",

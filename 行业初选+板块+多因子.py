@@ -76,7 +76,7 @@ class AdvancedFactorStrategy:
         
         # 技术指标参数
         self.ma_periods = [5, 10, 20]  # 均线周期
-        self.volume_ratio = 1.2        # 成交量放大倍数
+        self.volume_ratio = 1.8        # 成交量放大倍数
         
     def calculate_metrics(self, returns):
         """计算性能指标"""
@@ -212,12 +212,12 @@ class AdvancedFactorStrategy:
             self.logger.error(f"计算技术指标时出错: {str(e)}")
             return None
 
-    def check_technical_signals(self, df):
+    def check_technical_signals(self, df, stock_code):
         """检查技术指标信号"""
         try:
             if len(df) < 20:  # 确保有足够的数据
                 return False
-                
+            
             # 获取最新数据和前一天数据
             latest = df.iloc[-1]
             prev = df.iloc[-2]
@@ -237,16 +237,20 @@ class AdvancedFactorStrategy:
                 return False
 
             # 检查MACD信号
-            macd_signal = latest['MACD'] > 0 and latest['MACD'] > prev['MACD']
+            macd_signal = latest['MACD'] > 0 and latest['MACD'] > prev['MACD'] and latest['MACD'] > latest['Signal']
 
             # 检查RSI信号
-            rsi_signal = 30 < latest['RSI'] < 70
+            rsi_signal = 40 < latest['RSI'] < 60
 
             # 检查布林带信号
-            bb_signal = latest['close'] > latest['BB_middle']
+            bb_signal = latest['close'] > latest['BB_upper']
 
             # 检查成交量信号
-            volume_signal = latest['volume'] > latest['Volume_MA5']
+            volume_signal = latest['volume'] > latest['Volume_MA10'] * 2.0
+
+            # 过滤688开头的股票
+            if stock_code.startswith('sh.688'):
+                return False
 
             # 统计满足的信号数量（不包括ma_trend，因为它是必须的）
             signals = [macd_signal, rsi_signal, bb_signal, volume_signal]
@@ -289,7 +293,7 @@ RSI信号: {rsi_signal} (RSI: {latest['RSI']:.2f})
                         df = self.calculate_technical_indicators(df)
                         if df is not None:
                             # 检查是否满足金叉条件
-                            if self.check_technical_signals(df):
+                            if self.check_technical_signals(df, stock):
                                 matched_stocks.append(stock)
                                 stock_data[stock] = df
                                 self.logger.info(f"股票 {stock} 满足金叉条件")
